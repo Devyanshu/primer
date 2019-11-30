@@ -7,9 +7,9 @@ Welcome to Primer. Here you can find bite sized explanations of Computer science
 
 ## Contributing
 
-To contribute, first check if the topic is already covered, if you are sure it not, then proceed with choosing the subject it falls under, for example pip will fall under Python, similarly, ES6 under JavaScript.
+To contribute, first check if the topic is already covered, if you are sure it's not, then proceed with choosing the subject it falls under, for example pip will fall under Python, similarly, ES6 under JavaScript.
 
-Once you choose the subject, write the content in a seperate Markdown file. If you are new to Markdown, see [this](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
+Once you choose the subject, write the content in a seperate Markdown file in the directory for that subject. If you are new to Markdown, see [this](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet).
 
 
 ### Format
@@ -17,11 +17,14 @@ Once you choose the subject, write the content in a seperate Markdown file. If y
 Please stick to the following format while writing,
 
 ```
-  ## Heading
+  # Heading
   ##### By @[<your-Github-username>](<link-to-your-Github-profile>)
   
   <full content here>  
-
+  
+  
+  ## Further reads
+    <provide atleast two links>
 ```
 
 ## Important points
