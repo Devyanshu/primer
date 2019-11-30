@@ -29,11 +29,12 @@ Please stick to the following format while writing,
 
 ## Important points
 - Do not plagiarize the content, write in your own words.
-- Keep the content less than 200 words,
+- Keep the content less than 250 words,
 - If adding any image, either use a URL or upload in the images folder and then use its absolute path.
 - Provide atleast 2 links for further reading
 
 ### Other ways to contribute
-- Raise an issue if you want some some topic to be added
-- Or, improve any existing content
+- Raise an issue if you want some some topic to be added,
+- Improve any existing content,
+- Organize directories and other stuff
 
