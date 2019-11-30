@@ -1,4 +1,4 @@
-## PEP
+# PEP
 ##### By @[Devyanshu](https://github.com/Devyanshu)
 
 Python Enhancement Proposal (PEP) is generally used to add a new feature to the Python language or just to give some guidelines or information to the community. It is a document that specifies the technical details about the feature, the reason and logic behind and makes the process of adding new features both formal and efficient.
@@ -10,6 +10,6 @@ There are three kinds of PEP:
 
 PEP editors are responsible for everyting in the PEP workflow (assigning number and changing status of the PEPs) and reserve the right to reject PEP proposals. PEPs are reviewed by Guido van Rossum (aka "Benevolent Dictator for Life (BDFL)") and his chosen consultants, but the final authority for PEP approval is the BDFL.
 
-Further reads
+## Further reads
 - [What is PEP?](https://legacy.python.org/dev/peps/pep-0001/#what-is-a-pep)
 - [PEP 0](https://www.python.org/dev/peps/)
