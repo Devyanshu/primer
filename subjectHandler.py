@@ -15,6 +15,7 @@ class SubjectHandler():
 
     def get_primers(self, subject):
         topics = os.listdir(subject)
+        print(topics)
         primers = []
         for i in topics:
             name, extension = i.split('.')
