@@ -17,6 +17,6 @@ It is a common practice to use ```requirements.txt``` to list the packages with 
 
 ``` pip freeze > requirements.txt```
 
-Further reads
+## Further reads
 - [What is pip?](https://realpython.com/what-is-pip/)
 - [Wikipedia: pip](https://en.wikipedia.org/wiki/Pip_(package_manager))
