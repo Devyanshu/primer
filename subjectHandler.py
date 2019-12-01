@@ -15,7 +15,7 @@ class SubjectHandler():
 
     def get_primers(self, subject):
         topics = os.listdir(subject)
-        print(topicsp)
+        print(topics)
         primers = []
         for i in topics:
             if '.md' in i:
