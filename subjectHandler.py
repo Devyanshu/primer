@@ -15,12 +15,13 @@ class SubjectHandler():
 
     def get_primers(self, subject):
         topics = os.listdir(subject)
-        print(topics)
+        print(topicsp)
         primers = []
         for i in topics:
-            name, extension = i.split('.')
-            if name!="README" and extension == 'md':
-                primers.append(name)
+            if '.md' in i:
+                name, _ = i.split('.')
+                if name!="README":
+                    primers.append(name)
         return primers
 
 
