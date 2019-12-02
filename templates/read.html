@@ -22,24 +22,16 @@
 
 </head>
 
+
 <body>
 
     <div class="container">
-        <div class="section">
-            <h1>Primer</h1>
-            <h5>data to be loaded soon</h5>
-
+        <br><br>
+        <div>
+            {% autoescape off %}
+            {{content}}
+            {%endautoescape%}
         </div>
-
-        <!-- {% for primer in data%}
-        <h5>{{primer}}</h5>
-        <ul>
-            {% for topic in data[primer]%}
-            <li><a href='/read?subject={{primer}}&primer={{topic}}'>{{topic}}</a></li>
-            {% endfor %}
-        </ul>
-        {% endfor %} -->
-
     </div>
 
 </body>
