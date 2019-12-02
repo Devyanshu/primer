@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remote for slides</title>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+</head>
+
+<style>
+    .block {
+        display: block;
+        height: 20%;
+        width: 90%;
+        border: none;
+        padding: 14px 28px;
+        font-size: 16px;
+        cursor: pointer;
+        text-align: center;
+        margin: 2% 0 2% 0;
+        border-radius: 2%;
+    }
+
+
+    .red {
+        background-color: rgba(243, 111, 111, 0.5);
+        position: absolute;
+        height: 10%;
+        width: 35%;
+        top: 50%;
+        left: 50%;
+        font-size: 16px;
+        color: rgb(0, 0, 0);
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+    .green {
+        background-color: rgba(86, 251, 36, 0.5);
+        position: absolute;
+        top: 70%;
+        left: 50%;
+        font-size: 24px;
+        color: rgb(0, 0, 0);
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+
+    .blue {
+        background-color: rgb(63, 203, 238, 0.5);
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        font-size: 24px;
+        color: rgb(0, 0, 0);
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+    }
+</style>
+
+<body>
+
+    <div style="text-align: center; margin: 9% 0 9%; 0">
+        <h1>Remote for Slides</h1>
+        <form id="code">
+            <div>
+                <input type="text" class="code-input" id="code_inp" placeholder="Enter Code">
+                <button type="submit" id="go_button">Go</button>
+            </div>
+        </form>
+    </div>
+
+    <div id="main">
+        <form id="next">
+            <div class="row">
+
+                <button type="submit" class="block blue">Next</button>
+
+            </div>
+        </form>
+        <form id="end">
+            <div class="row">
+
+                <button type="submit" class="block red">End</button>
+
+            </div>
+        </form>
+        <form id="prev">
+            <div class="row">
+                <button type="submit" class="block green">Previous</button>
+            </div>
+        </form>
+
+    </div>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+        $('#main').hide();
+
+        $('#code').on('submit', function (event) {
+            $.ajax({
+                data: {
+                    code: $('#code_inp').val()
+                },
+                type: "POST",
+                url: '/code'
+            })
+                .done(function (data) {
+                    if (data.success) {
+                        $('#main').show()
+                    }
+                    else { alert('Wrong code') }
+                });
+
+            event.preventDefault();
+        });
+        $('#next').on('submit', function (event) {
+
+            $.ajax({
+                data: {},
+                type: "POST",
+                url: '/next'
+            })
+                .done(function (data) {
+                    if (data.error) { }
+                    else { }
+                });
+
+            event.preventDefault();
+        });
+
+        $('#end').on('submit', function (event) {
+
+            $.ajax({
+                data: {
+                    // confirmation: window.confirm("Do you want to exit?");
+                },
+                type: "POST",
+                url: '/end'
+            })
+                .done(function (data) {
+                    if (data.error) { }
+                    else {
+                        window.location = '/';
+                    }
+                });
+
+            event.preventDefault();
+        });
+        $('#prev').on('submit', function (event) {
+
+            $.ajax({
+                data: {},
+                type: "POST",
+                url: '/prev'
+            })
+                .done(function (data) {
+                    if (data.error) { }
+                    else { }
+                });
+
+            event.preventDefault();
+        });
+    });
+</script>
+
+</html>

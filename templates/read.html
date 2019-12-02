@@ -4,7 +4,7 @@
 <head>
 
     <meta charset="utf-8">
-    <title>Primer</title>
+    <title>{{primer}} | {{subject}}</title>
     <meta name="description" content="Primer, get bite sized information to get you ⬆ and 🏃 quickly.">
     <meta name="author" content="Primer">
     <meta name="theme-color" content="#ffffff">
@@ -27,6 +27,8 @@
 
     <div class="container">
         <br><br>
+        <a style='float: right;' href="https://github.com/Devyanshu/primer/blob/master/{{subject}}/{{primer}}.md"
+            target="_blank">Edit</a>
         <div>
             {% autoescape off %}
             {{content}}

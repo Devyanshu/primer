@@ -40,7 +40,7 @@ def read():
     except:
         return redirect('/')
     else:
-        return render_template('read.html', content = content)
+        return render_template('read.html', content = content, subject=args['subject'], primer=args['primer'])
 
 if __name__ == "__main__":
     app.run(port=8000)
