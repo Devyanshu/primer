@@ -1,5 +1,7 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect
 from subjectHandler import SubjectHandler
+from contentHandler import ContentHandler
+import os 
 
 app = Flask(__name__, static_url_path='/static')
 
@@ -24,8 +26,21 @@ def home():
 @app.route("/read")
 def read():
     args = dict(request.args)
+    if not args:
+        return redirect('/')
     print(args)
-    return render_template('read.html')
+    if 'subject' in args and 'primer' in args:
+        path = os.path.join(args['subject'], args['primer'] + '.md')
+    else:
+        return redirect('/')
+    ch = ContentHandler(path)
+    
+    try:
+        content = ch.get_HTML()
+    except:
+        return redirect('/')
+    else:
+        return render_template('read.html', content = content)
 
 if __name__ == "__main__":
     app.run(port=8000)
