@@ -18,7 +18,7 @@ Please stick to the following format while writing,
 
 ```
   # Heading
-  ##### By @[<your-Github-username>](<link-to-your-Github-profile>)
+  ##### By [<your-Github-username>](<link-to-your-Github-profile>)
   
   <full content here>  
   
