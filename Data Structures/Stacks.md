@@ -5,19 +5,23 @@
   For example, Let's assume we have a stack of plates, to add more plates to it, we add it from the top and to remove plates from the stack, we again remove it from the top.
   
   Adding elements to a stack is called push whereas removing elements from it is called pop. To better understand this, consider the following image.
+  
+  
   <img src='https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png' height=400 width=400 alt='Stacks: From Wikipedia'>
   
-  Stacks have two conditions,
+  
+ #### Stacks have two conditions,
   - Overflow, when the stack is full -> can't preform push
   - underflow, when the stack is empty -> can't perform pop
   
-  Stacks can be implemented using different data structure.
+ #### Stacks can be implemented using different data structures.
 -   Arrays, Overflow condition occurs when the stack size == array size
 -   Dynamic Arrays, No overflow condition because the stack can grow in size just like the dynamic array
 -   Linked list, No overflow condition because more nodes can be added when required.
+
 All the above implementations can have underflow
 
-Pseudocde for array implementation of Stack
+#### Pseudocode for array implementation of Stack
 ```
 Stack {
  stack: array
