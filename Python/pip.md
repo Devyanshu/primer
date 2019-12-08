@@ -1,5 +1,5 @@
-## pip
-##### By @[Devyanshu](https://github.com/Devyanshu)
+# pip
+##### By [Devyanshu](https://github.com/Devyanshu)
 
 pip is the standard package installer and manager that comes included with newer versions of Python (3.4+). It allows users to install and manage third-party packages from [Python Package Index (PyPI)](https://pypi.org/). Though Python comes with a lot of libraries out of the box, it is often required to install other libraries from PyPI's 200, 000+ collection of community shared packages.
 
