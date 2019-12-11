@@ -4,7 +4,7 @@
   
   For example, Let's assume we have a stack of plates, to add more plates to it, we add it from the top and to remove plates from the stack, we again remove it from the top.
   
-  Adding elements to a stack is called push whereas removing elements from it is called pop. To better understand this, consider the following image.
+  Adding elements to a stack is called push whereas removing elements from it is called pop. To better understand this, consider the following image. (Source : Wikipedia)
   
   
   <img src='https://upload.wikimedia.org/wikipedia/commons/b/b4/Lifo_stack.png' height=400 width=400 alt='Stacks: From Wikipedia'>
