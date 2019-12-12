@@ -22,16 +22,20 @@
 
 </head>
 <style>
-.container{
-    max-width: 80%;
+    .container {
+        max-width: 80%;
     }
 </style>
+
 <body>
 
     <div class="container">
         <br><br>
-        <a style='float: right;' href="https://github.com/Devyanshu/primer/blob/master/{{subject}}/{{primer}}.md"
-            target="_blank">Edit</a>
+        <div style='float: right;'>
+            <a href="../" target="_blank">Home</a> |
+            <a href="https://github.com/Devyanshu/primer/blob/master/{{subject}}/{{primer}}.md" target="_blank">Edit</a>
+        </div>
+
         <div>
             {% autoescape off %}
             {{content}}
