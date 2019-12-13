@@ -47,7 +47,10 @@ class Stats:
         today = datetime.now().date()
         ld = last_updated.date()
         if ld == today :
-            self.last_updated = 'today'
+            hrs = datetime.now() - last_updated
+            hrs = hrs.total_seconds() 
+            temp = int(hrs//3600 - 5.5) + 1
+            self.last_updated = '1 hour ago' if temp == 1 else '{} hours ago'.format(temp)
         else:
             days = ld - today
             days = days.days
