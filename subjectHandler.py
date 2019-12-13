@@ -7,7 +7,8 @@ class SubjectHandler():
 
     def filter_non_subject(self):
         all_files = os.listdir()
-        default = set(['static', 'templates', 'pr_env', '.vscode', '__pycache__', '.heroku']) # remove pr_env & .vscode later
+        # remove pr_env & .vscode later
+        default = set(['static', 'templates', 'pr_env', '.vscode', '__pycache__', '.heroku', '.profile.d']) 
         for ii in all_files:
             if os.path.isdir(ii) and ii not in default:
                 # print(ii)

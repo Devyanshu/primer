@@ -23,7 +23,7 @@ class Stats:
             contributors[contributor['login']] = {
                                                 'contributions':contributor['contributions'],
                                                 'avatarUrl': contributor['avatar_url'],
-                                                'profile': contributor['url']
+                                                'profile': contributor['html_url']
                                                 }
         self.contributors = contributors
 
@@ -52,7 +52,7 @@ class Stats:
             days = ld - today
             days = days.days
             if days == 1:
-                self.last_updated = '1 day ago'
+                self.last_updated = 'yesterday'
             else:
                 self.last_updated = '{} days ago'.format(days)
         

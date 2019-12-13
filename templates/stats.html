@@ -38,25 +38,25 @@
 
         <div class="row" style="text-align: center;">
             <div class="three columns">
-                <h3>{% if tc ==1 %}
+                <h5>{% if tc ==1 %}
                     {{tc}} contributor
                     {% else %}
                     {{tc}} contributors
                     {% endif %}
-                </h3>
+                </h5>
             </div>
             <div class="three columns">
-                <h3>{{tp}} Primers</h3>
+                <h5>{{tp}} Primers</h5>
             </div>
             <div class="three columns">
-                <h3>{{tt}} topics</h3>
+                <h5>{{tt}} topics</h5>
             </div>
             <div class="three columns">
-                <h3>Last updated {{lu}}</h3>
+                <h5>Last updated {{lu}}</h5>
             </div>
         </div>
         <div style="margin-top: 5%;">
-            <h2>Contributors</h2>
+            <h3>Contributors</h3>
             {% for cs in data%}
             <div class="row">
 
@@ -64,7 +64,7 @@
                     <img src="{{data[cs].avatarUrl}}" height="200" width="200">
                 </div>
                 <div class="nine columns">
-                    <h3><a href="{{data[cs].profile}}">{{cs}}</a></h3>
+                    <h4><a href="{{data[cs].profile}}">{{cs}}</a></h4>
                     <h5>{{data[cs].contributions}} contributions </h5>
                 </div>
                 <br>
