@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <title>Stats</title>
+    <meta name="description" content="Primer, get bite sized information to get you ⬆ and 🏃 quickly.">
+    <meta name="author" content="Primer">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="msapplication-navbutton-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#ffffff">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+    <link rel="stylesheet" href="{{url_for('static', filename='css/normalize_min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/skeleton_min.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/custom.css')}}">
+
+    <link rel="icon" type="image/png" href="{{url_for('static', filename='images/primer_favicon.png')}}">
+
+</head>
+<style>
+    .container {
+        max-width: 80%;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="section">
+            <h1>Stats</h1>
+            <a style='float: right;' href="../">Home</a>
+
+        </div>
+
+        <div class="row" style="text-align: center;">
+            <div class="three columns">
+                <h3>{% if tc ==1 %}
+                    {{tc}} contributor
+                    {% else %}
+                    {{tc}} contributors
+                    {% endif %}
+                </h3>
+            </div>
+            <div class="three columns">
+                <h3>{{tp}} Primers</h3>
+            </div>
+            <div class="three columns">
+                <h3>{{tt}} topics</h3>
+            </div>
+            <div class="three columns">
+                <h3>Last updated {{lu}}</h3>
+            </div>
+        </div>
+        <div style="margin-top: 5%;">
+            <h2>Contributors</h2>
+            {% for cs in data%}
+            <div class="row">
+
+                <div class="two columns" style="display: inline;">
+                    <img src="{{data[cs].avatarUrl}}" height="200" width="200">
+                </div>
+                <div class="nine columns">
+                    <h3><a href="{{data[cs].profile}}">{{cs}}</a></h3>
+                    <h5>{{data[cs].contributions}} contributions </h5>
+                </div>
+                <br>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+</body>
+
+</html>
