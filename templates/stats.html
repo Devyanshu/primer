@@ -65,7 +65,14 @@
                 </div>
                 <div class="nine columns">
                     <h5><a href="{{data[cs].profile}}">{{cs}}</a></h5>
-                    <h6>{{data[cs].contributions}} contributions </h6>
+                    <h6>{{data[cs].contributions}} contributions</h6>
+                    {% if data[cs].primers %}
+                    {% if data[cs].primers ==1 %}
+                    <h6>1 Primer written</h6>
+                    {% else %}
+                    <h6>{{data[cs].primers}} Primers written</h6>
+                    {% endif %}
+                    {% endif %}
                 </div>
             </div>
             <br>

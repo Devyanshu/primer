@@ -23,7 +23,8 @@ class Stats:
             contributors[contributor['login']] = {
                                                 'contributions':contributor['contributions'],
                                                 'avatarUrl': contributor['avatar_url'],
-                                                'profile': contributor['html_url']
+                                                'profile': contributor['html_url'],
+                                                'primers':5 #TODO: Implement autogeneration of this
                                                 }
         self.contributors = contributors
 
@@ -37,22 +38,26 @@ class Stats:
             else:
                 primers += res
         self.total_primers = primers
-        print(self.total_topics)
 
     def get_last_updated(self):
         url = 'https://api.github.com/repos/Devyanshu/primer'
         temp = urlopen(url).read()
         last_updated = json.loads(temp.decode('utf-8'))['updated_at']   
         last_updated = datetime.strptime(last_updated, '%Y-%m-%dT%H:%M:%SZ')
-        today = datetime.now().date()
+        print(last_updated)       
+        today = datetime.utcnow().date()
         ld = last_updated.date()
         if ld == today :
-            hrs = datetime.now() - last_updated
+            hrs = datetime.utcnow() - last_updated
             hrs = hrs.total_seconds() 
-            temp = int(hrs//3600 - 5.5) + 1
-            self.last_updated = '1 hour ago' if temp == 1 else '{} hours ago'.format(temp)
+            temp = int(hrs//3600)
+            if temp >=1:
+                self.last_updated = '1 hour ago' if temp == 1 else '{} hours ago'.format(temp)
+            else:
+                temp = int(hrs//60)
+                self.last_updated = 'just now'.format(temp) if temp <= 1 else '{} mins ago'.format(temp)
         else:
-            days = ld - today
+            days = today - ld
             days = days.days
             if days == 1:
                 self.last_updated = 'yesterday'
