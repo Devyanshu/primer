@@ -33,6 +33,7 @@ def read():
         path = os.path.join(args['subject'], args['primer'] + '.md')
     else:
         return redirect('/')
+        
     ch = ContentHandler(path)
     
     try:
@@ -43,4 +44,4 @@ def read():
         return render_template('read.html', content = content, subject=args['subject'], primer=args['primer'])
 
 if __name__ == "__main__":
-    app.run(port=8000)
+    app.run(port=5000)

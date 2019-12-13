@@ -21,6 +21,11 @@
     <link rel="icon" type="image/png" href="{{url_for('static', filename='images/primer_favicon.png')}}">
 
 </head>
+<style>
+    .container {
+        max-width: 60%;
+    }
+</style>
 
 <body>
 
@@ -32,14 +37,28 @@
             <a style='float: right;' href="https://github.com/Devyanshu/primer">Contribute</a>
 
         </div>
-
-        {% for primer in data%}
+        {% for primer in data %}
         <h5>{{primer}}</h5>
         <ul>
-            {% for topic in data[primer]%}
+            {% for topic in data[primer] %}
+            {% if topic is mapping %}
+            {% for subtopic in topic %}
+            <li>{{subtopic}}
+                <ul>
+                    {% for value in topic[subtopic] %}
+                    <li><a href='/read?subject={{primer}}/{{subtopic}}&primer={{value}}'>{{value}}</a></li>
+                    {% endfor %}
+                </ul>
+            </li>
+            {% endfor %}
+
+            {% else %}
             <li><a href='/read?subject={{primer}}&primer={{topic}}'>{{topic}}</a></li>
+            {% endif %}
+
             {% endfor %}
         </ul>
+
         {% endfor %}
 
     </div>
