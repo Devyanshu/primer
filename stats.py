@@ -24,19 +24,23 @@ class Stats:
                                                 'contributions':contributor['contributions'],
                                                 'avatarUrl': contributor['avatar_url'],
                                                 'profile': contributor['html_url'],
-                                                'primers':5 #TODO: Implement autogeneration of this
+                                                'primers': 5 #TODO: Implement autogeneration of this
                                                 }
         self.contributors = contributors
 
     def no_of_primers(self):
         primers = []
+        temp = []
         for ii in self.total_topics:
             res = self.sh.get_primers(ii)
-            if isinstance(res, dict):
-                for vals in res:
-                    primers += vals
+            temp += res
+        for pr in temp:
+            if isinstance(pr, dict):
+                vals = [item for prs in list(pr.values()) for item in prs]
+                primers += vals
             else:
-                primers += res
+                primers.append(pr)
+
         self.total_primers = primers
 
     def get_last_updated(self):
