@@ -14,14 +14,19 @@ app.secret_key = "nothingfornow"
 
 @app.route("/")
 def home():
-    sh = SubjectHandler()
-    subjects = sh.subjects
-    primers = {}
-    for ii in subjects:
-        topics = sh.get_primers(ii)
-        if topics:
-            primers[ii] = topics
-    return render_template('index.html', data=primers)
+    try:
+        sh = SubjectHandler()
+        subjects = sh.subjects
+        primers = {}
+        for ii in subjects:
+            topics = sh.get_primers(ii)
+            if topics:
+                primers[ii] = topics
+    except:
+        return render_template('error.html')
+    else:
+        return render_template('index.html', data=primers)
+
 
 
 @app.route("/read")
@@ -40,7 +45,7 @@ def read():
     try:
         content = ch.get_HTML()
     except:
-        return redirect('/')
+        return render_template('error.html')
     else:
         return render_template('read.html', content = content, subject=args['subject'], primer=args['primer'])
 
