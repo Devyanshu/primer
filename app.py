@@ -47,17 +47,22 @@ def read():
 
 @app.route('/stats')
 def stats():
-    st = Stats()
-    st.get_contributors()
-    data = st.contributors
-    st.no_of_primers()
-    t_primers = len(st.total_primers)
-    t_topics = len(st.total_topics)
-    st.get_last_updated()
-    lu = st.last_updated
-    stars = st.stars
-    forks = st.forks
-    return render_template('stats.html', data=data, tp=t_primers, tt=t_topics, tc=len(data), lu=lu, ts=stars, tf=forks)
+    try:
+        st = Stats()
+        st.get_contributors()
+        data = st.contributors
+        st.no_of_primers()
+        t_primers = len(st.total_primers)
+        t_topics = len(st.total_topics)
+        st.get_last_updated()
+        lu = st.last_updated
+        stars = st.stars
+        forks = st.forks
+    except:
+        return render_template('error.html')
+    else:
+        return render_template('stats.html', data=data, tp=t_primers, tt=t_topics, tc=len(data), lu=lu, ts=stars, tf=forks)
+    
 
 if __name__ == "__main__":
     app.run(port=5000)
