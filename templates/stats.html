@@ -73,10 +73,10 @@
             {% for cs in data%}
             <div class="row">
 
-                <div class="three columns">
-                    <img src="{{data[cs].avatarUrl}}" height="220" width="220">
+                <div class="two columns">
+                    <img src="{{data[cs].avatarUrl}}" height="150" width="150">
                 </div>
-                <div class="eight columns">
+                <div class="ten columns">
                     <h5><a href="{{data[cs].profile}}" target="_blank">{{cs}}</a></h5>
                     <h6>{{data[cs].contributions}} contributions</h6>
                     {% if data[cs].primers %}
