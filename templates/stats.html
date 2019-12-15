@@ -21,11 +21,6 @@
     <link rel="icon" type="image/png" href="{{url_for('static', filename='images/primer_favicon.png')}}">
 
 </head>
-<style>
-    .container {
-        max-width: 80%;
-    }
-</style>
 
 <body>
 
@@ -37,7 +32,18 @@
         </div>
 
         <div class="row" style="text-align: center;">
-            <div class="three columns">
+            <div class="four columns">
+                <h5>{{tp}} Primers</h5>
+            </div>
+            <div class="four columns">
+                <h5>{{tt}} topics</h5>
+            </div>
+            <div class="four columns">
+                <h5>Last updated {{lu}}</h5>
+            </div>
+        </div>
+        <div class="row" style="text-align: center;">
+            <div class="four columns">
                 <h5>{% if tc ==1 %}
                     {{tc}} contributor
                     {% else %}
@@ -45,14 +51,21 @@
                     {% endif %}
                 </h5>
             </div>
-            <div class="three columns">
-                <h5>{{tp}} Primers</h5>
+            <div class="four columns">
+                <h5>{% if ts ==1 %}
+                    {{ts}} star
+                    {% else %}
+                    {{ts}} stars
+                    {% endif %}
+                </h5>
             </div>
-            <div class="three columns">
-                <h5>{{tt}} topics</h5>
-            </div>
-            <div class="three columns">
-                <h5>Last updated {{lu}}</h5>
+            <div class="four columns">
+                <h5>{% if tf ==1 %}
+                    {{tf}} fork
+                    {% else %}
+                    {{tf}} forks
+                    {% endif %}
+                </h5>
             </div>
         </div>
         <div style="margin-top: 5%;">
@@ -60,11 +73,11 @@
             {% for cs in data%}
             <div class="row">
 
-                <div class="two columns" style="display: inline;">
-                    <img src="{{data[cs].avatarUrl}}" height="200" width="200">
+                <div class="three columns">
+                    <img src="{{data[cs].avatarUrl}}" height="220" width="220">
                 </div>
-                <div class="nine columns">
-                    <h5><a href="{{data[cs].profile}}">{{cs}}</a></h5>
+                <div class="eight columns">
+                    <h5><a href="{{data[cs].profile}}" target="_blank">{{cs}}</a></h5>
                     <h6>{{data[cs].contributions}} contributions</h6>
                     {% if data[cs].primers %}
                     {% if data[cs].primers ==1 %}

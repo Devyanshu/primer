@@ -12,6 +12,8 @@ class Stats:
         self.total_topics = self.sh.subjects
         self.total_primers = []
         self.last_updated = ''
+        self.stars = 0
+        self.forks = 0
 
 
     def get_contributors(self):
@@ -24,7 +26,7 @@ class Stats:
                                                 'contributions':contributor['contributions'],
                                                 'avatarUrl': contributor['avatar_url'],
                                                 'profile': contributor['html_url'],
-                                                'primers': 5 #TODO: Implement autogeneration of this
+                                                # 'primers': 6  TODO: Implement autogeneration of this
                                                 }
         self.contributors = contributors
 
@@ -46,7 +48,10 @@ class Stats:
     def get_last_updated(self):
         url = 'https://api.github.com/repos/Devyanshu/primer'
         temp = urlopen(url).read()
-        last_updated = json.loads(temp.decode('utf-8'))['updated_at']   
+        temp = json.loads(temp.decode('utf-8'))
+        self.stars = temp['stargazers_count']
+        self.forks = temp['forks_count']
+        last_updated = temp['updated_at']   
         last_updated = datetime.strptime(last_updated, '%Y-%m-%dT%H:%M:%SZ')
         print(last_updated)       
         today = datetime.utcnow().date()
