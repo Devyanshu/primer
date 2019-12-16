@@ -34,7 +34,7 @@ class SubjectHandler():
         for i in topics:
             if '.md' in i:
                 name, _ = i.split('.')
-                if name!="README":
+                if name != "README" and name != subtopic:
                     subprimers.append(name)
         return { subtopic : subprimers }
 

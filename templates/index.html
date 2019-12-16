@@ -47,12 +47,12 @@
             {% for topic in data[primer] %}
             {% if topic is mapping %}
             {% for subtopic in topic %}
-            <li>{{subtopic}}
-                <ul>
-                    {% for value in topic[subtopic] %}
-                    <li><a href='/read?subject={{primer}}/{{subtopic}}&primer={{value}}'>{{value}}</a></li>
-                    {% endfor %}
-                </ul>
+            <li><a href='/read?subject={{primer}}/{{subtopic}}&primer={{subtopic}}'>{{subtopic}}</a></li>
+            <ul>
+                {% for value in topic[subtopic] %}
+                <li><a href='/read?subject={{primer}}/{{subtopic}}&primer={{value}}'>{{value}}</a></li>
+                {% endfor %}
+            </ul>
             </li>
             {% endfor %}
 
