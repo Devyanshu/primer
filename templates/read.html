@@ -27,13 +27,15 @@
     }
 </style>
 
-<body>
+<body id='content'>
 
     <div class="container">
         <br><br>
         <div style='float: right;'>
             <a href="../">Home</a> |
             <a href="https://github.com/Devyanshu/primer/blob/master/{{subject}}/{{primer}}.md" target="_blank">Edit</a>
+            |
+            <span onclick="dark()">&#128161;</span>
         </div>
 
         <div>
@@ -44,5 +46,21 @@
     </div>
 
 </body>
+<script>
+    var counter = 0;
+    function dark() {
+        counter++;
+        var body_el = document.getElementById('content');
+        var code_el = document.getElementsByTagName('code');
+        if (counter % 2 == 1) {
+            body_el.style.backgroundColor = '#000'; body_el.style.color = '#fff';
+            for (var i = 0; i < code_el.length; i++) { code_el[i].style.backgroundColor = "#000"; code_el[i].style.color = '#fff'; }
+        }
+        else {
+            body_el.style.backgroundColor = '#fff'; body_el.style.color = '#000';
+            for (var i = 0; i < code_el.length; i++) { code_el[i].style.backgroundColor = "#fff"; code_el[i].style.color = '#000'; }
+        }
+    }
+</script>
 
 </html>
