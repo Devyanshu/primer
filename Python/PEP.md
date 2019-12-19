@@ -11,6 +11,6 @@ All the PEPs are in the public domain and are available [here](https://www.pytho
 
 PEP editors are responsible for everyting in the PEP workflow (assigning number and changing status of the PEPs) and reserve the right to reject PEP proposals. PEPs are reviewed by Guido van Rossum (aka "Benevolent Dictator for Life (BDFL)") and his chosen consultants, but the final authority for PEP approval is the BDFL.
 
-## Further reads
+#### Further reads
 - [What is PEP?](https://legacy.python.org/dev/peps/pep-0001/#what-is-a-pep)
 - [PEP 0](https://www.python.org/dev/peps/)

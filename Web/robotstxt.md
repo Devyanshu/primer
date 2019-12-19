@@ -25,6 +25,6 @@ Allow: /
  - The encoding of robots.txt should be UTF-8, to make sure every crawler understands it
  - A link to the sitemap should be present as ```Sitemap: <link to sitemap.xml> ```
 
-  ## Further reads
+  #### Further reads
   - [robotstxt.org](https://www.robotstxt.org/)
   - [Create a robots.txt](https://developers.google.com/search/reference/robots_txt)

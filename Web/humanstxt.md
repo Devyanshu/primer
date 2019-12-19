@@ -25,6 +25,6 @@ Software: Software used for the development
   Creative use of humans.txt can be seen from Netflix ([here](http://www.netflix.com/humans.txt)) and Adult Swim ([here](http://www.adultswim.com/humans.txt)).
 
 
-  ## Further reads
+  #### Further reads
   - [humanstxt.org](http://humanstxt.org/)
   - [List of companies with humans.txt](https://www.reddit.com/r/webdev/comments/2u4p41/companies_with_humanstxt/)

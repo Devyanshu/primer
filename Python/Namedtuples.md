@@ -23,6 +23,6 @@ stud_2 = Student(9.8,1145)
  
  Namedtuples can be used to write better and readable code, it provides a structure to the data and serves as a memory efficient substitute for immutable classes.
   
-  ## Further reads
+  #### Further reads
   - [Writing clean Python with Namedtuples](https://dbader.org/blog/writing-clean-python-with-namedtuples)
   - [Namedtuples in Python](https://www.geeksforgeeks.org/namedtuple-in-python)

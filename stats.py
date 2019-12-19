@@ -52,8 +52,7 @@ class Stats:
         self.stars = temp['stargazers_count']
         self.forks = temp['forks_count']
         last_updated = temp['updated_at']   
-        last_updated = datetime.strptime(last_updated, '%Y-%m-%dT%H:%M:%SZ')
-        print(last_updated)       
+        last_updated = datetime.strptime(last_updated, '%Y-%m-%dT%H:%M:%SZ')      
         today = datetime.utcnow().date()
         ld = last_updated.date()
         if ld == today :

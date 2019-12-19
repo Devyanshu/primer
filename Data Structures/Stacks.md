@@ -46,6 +46,6 @@ pop()
         
 ```
   
-  ## Further reads
+  #### Further reads
   - [Wikipedia](https://en.wikipedia.org/wiki/Stack_(abstract_data_type))
   - [GeeksforGeeks](https://www.geeksforgeeks.org/stack-data-structure/)

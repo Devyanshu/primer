@@ -17,6 +17,6 @@ for i in generator_demo(10):
 
   To prove that the number are yielded one by one and not at once, uncomment the print statement in the generator and run again. You'll see each number getting printed twice, one from the genrator and the other from the for loop.
   
-  ## Further reads
+  #### Further reads
 - [Generators](https://www.learnpython.org/en/Generators)
 - [Introduction to Python Generators](https://realpython.com/introduction-to-python-generators/)
