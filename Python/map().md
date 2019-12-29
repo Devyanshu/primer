@@ -4,7 +4,7 @@
   map() in Python is used to apply a given function to the items of a given iterable or iterables and return a map object.
 
 
-  map() accepts only one function and atleast one iterable. The number of iterables should be equal to the number of arguments accepted by the passed function. Any iterable such as string, lists, tuples and sets can be passed to the map function. map() returns a map object which can be convererted to a list, tuple or a set.
+  map() accepts only one function and atleast one iterable. The number of iterables should be equal to the number of arguments accepted by the passed function. Any iterable such as string, lists, tuples and sets can be passed to the map function. map() returns a map object which can be converted to a list, tuple or a set.
   
   When more than one iterable is given, corresponding elements from each iterable is supplied to the function. If the length of iterables are not same, map() will produce the output with the length equal to that of the smallest iterable and other elements will be ignored.
   
