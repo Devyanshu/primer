@@ -5,3 +5,4 @@
 - [Generators](https://github.com/Devyanshu/primer/blob/master/Python/Generators.md)
 - [namedtuples](https://github.com/Devyanshu/primer/blob/master/Python/Namedtuples.md)
 - [map()](https://github.com/Devyanshu/primer/blob/master/Python/map().md)
+- [filter()](https://github.com/Devyanshu/primer/blob/master/Python/filter().md)
