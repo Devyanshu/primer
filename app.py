@@ -67,6 +67,10 @@ def stats():
         return render_template('error.html')
     else:
         return render_template('stats.html', data=data, tp=t_primers, tt=t_topics, tc=len(data), lu=lu, ts=stars, tf=forks)
+
+@app.route('/contribute')
+def contribute():
+    return render_template('contribute.html')
     
 
 if __name__ == "__main__":
