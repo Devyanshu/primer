@@ -2,7 +2,7 @@
   ##### By [Devyanshu](https://github.com/Devyanshu)
   
   Namedtuples in Python can be seen as an improvement of the built-in tuple data type. Just like tuples, they are immutable and can store objects of different data types. 
-  When it comes to accessing the stored value, namedtuples have an advantage over tuples because they can be accessed using field names just like dictionary, whereas tuples can only be accessed using indexes. namedtuples provide better structure to store data as compared to tuples.
+  When it comes to accessing the stored value, namedtuples have an advantage over tuples because they can be accessed using field names just like dictionary, whereas tuples can only be accessed using indexes. Also, namedtuples provide better structure to store data as compared to tuples.
   
 ```
 from collections import namedtuple
