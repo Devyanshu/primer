@@ -1,6 +1,6 @@
 # Stacks
   ##### By [Devyanshu](https://github.com/Devyanshu)
-  Stacks are linear data structure that follow the Last In, First Out (LIFO) principle. This means that the data inserted at the last will be removed first, this is becauase the data can be inserted and removed from one place only.
+  Stacks are linear data structures that follow the Last In, First Out (LIFO) principle. This means that the data inserted at the last will be removed first, this is because the data can be inserted and removed from one place only.
   
   For example, Let's assume we have a stack of plates, to add more plates to it, we add it from the top and to remove plates from the stack, we again remove it from the top.
   
@@ -11,8 +11,8 @@
   
   
  #### Stacks have two conditions,
-  - Overflow, when the stack is full -> can't preform push
-  - underflow, when the stack is empty -> can't perform pop
+  - Overflow, when the stack is full -> can't perform push
+  - Underflow, when the stack is empty -> can't perform pop
   
  #### Stacks can be implemented using different data structures.
 -   Arrays, Overflow condition occurs when the stack size == array size
