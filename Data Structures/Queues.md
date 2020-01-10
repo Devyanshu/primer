@@ -16,6 +16,10 @@ For Example, if we have a line of people waiting for a bus, the person at the fr
 #### How Stack is different from queue?
 The difference between stacks and queues is in removing. In a stack we remove the most recently added element but in a queue, we remove the least recently added item.
 
+#### Psuedocode for implementation using arrays
+
+
+
 
 
 
