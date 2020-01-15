@@ -17,13 +17,22 @@ For Example, if we have a line of people waiting for a bus, the person at the fr
 The difference between stacks and queues is in removing. In a stack we remove the most recently added element but in a queue, we remove the least recently added item.
 
 #### Psuedocode for implementation using arrays
+```
+enqueue(data) 
+    if queue is full ->   
+        return 'Overflow'
+    else ->
+        rear = rear + 1
+        queue[rear] <- data
 
-
-
-
-
-
+dequeue(data)
+    if queue is empty ->
+        return 'Underflow'
+    else ->
+        data = queue[front]
+        front <- front + 1
+```
 
 #### Further reads
-- https://www.hackerearth.com/practice/data-structures/queues/basics-of-queues/tutorial/
-- https://www.geeksforgeeks.org/queue-data-structure/
+- [GeeksforGeeks](https://www.geeksforgeeks.org/queue-data-structure/)
+- [Wikipedia](https://en.wikipedia.org/wiki/Queue_(abstract_data_type))
